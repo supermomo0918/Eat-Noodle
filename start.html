@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>start</title>
+  </head>
+    <style type="text/css">
+      .start {
+        background-image: url(./start.png);
+        width: 700px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      #start-btn {
+        background-image: url(./pic.jpg);
+        width: 200px;
+        height: 55px;
+        margin-bottom: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="start">
+      <form>
+        <input type="button" id="start-btn" />
+      </form>
+    </div>
+    <script>
+      const start = document.querySelector("#start-btn");
+      start.addEventListener("click", function () {
+        location.href = "eat-noodle.html";
+      });
+    </script>
+  </body>
+</html>

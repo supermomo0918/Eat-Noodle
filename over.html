@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>over</title>
+  </head>
+    <style type="text/css">
+      .over {
+        background-image: url(./over.jpg);
+        width: 700px;
+        height: 500px;
+        border-width: 5px;
+        border-style: solid;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      #over-btn {
+        background-image: url(./again.jpg);
+        width: 200px;
+        height: 55px;
+        margin-bottom: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="over">
+      <form>
+        <input type="button" id="over-btn" />
+      </form>
+    </div>
+    <script>
+      const over = document.querySelector("#over-btn");
+      over.addEventListener("click", function () {
+        location.href = "start.html";
+      });
+    </script>
+  </body>
+</html>

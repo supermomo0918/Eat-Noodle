@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eat-noodle</title>
+  </head>
+  <style>
+    .container {
+      background-image: url(./gameback.jpg);
+      width: 700px;
+      height: 520px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .time-area {
+      background-image: url(./time.jpg);
+      background-repeat: no-repeat;
+      height: 200px;
+      width: 240px;
+      margin-top: 5px;
+      padding-top: 22px;
+      padding-left: 110px;
+    }
+    #score {
+      margin-top: 16px;
+    }
+    .noodle-item {
+      margin-right: 10px;
+      display: flex;
+    }
+    .noodle-s {
+      margin-top: 10px;
+      margin-left: 10px;
+      width: 60px;
+      height: 100px;
+    }
+    .noodle-l {
+      margin-top: 10px;
+      width: 60px;
+      height: 100px;
+    }
+    .noodle-super {
+      margin-top: 10px;
+      width: 60px;
+      height: 100px;
+    }
+    .row-person {
+      margin-top: 23px;
+      display: flex;
+      justify-content: center;
+    }
+    .img-box {
+      display: flex;
+      justify-content: center;
+    }
+    #message {
+      display: none;
+    }
+    .time {
+      height: 20px;
+      width: 80px;
+      margin-top: 5px;
+      border: 0px;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="time-area">
+          <div id="time"></div>
+          <div id="score"></div>
+        </div>
+        <div class="noodle-item">
+          <input
+            type="image"
+            name="1"
+            id="1"
+            class="noodle-s"
+            img
+            src="./small.jpg"
+            onClick="noodlecontrol(this)"
+          />
+          <input
+            type="image"
+            name="2"
+            id="2"
+            class="noodle-l"
+            img
+            src="./big-down.jpg"
+            onClick="noodlecontrol(this)"
+          />
+          <input
+            type="image"
+            name="3"
+            id="3"
+            class="noodle-super"
+            img
+            src="./top-down.jpg"
+            onClick="noodlecontrol(this)"
+          />
+        </div>
+      </div>
+      <div class="row-person">
+        <img src="./person-1.jpg" width="145" height="130" id="person" />
+      </div>
+      <div class="img-box">
+        <img
+          src="./desk.PNG"
+          id="imgchange"
+          width="100"
+          height="100"
+          style="margin-top: 2px"
+          onclick="count(this);"
+        />
+      </div>
+      <!-- 音效 -->
+      <audio src="./noodle.mp3" id="audio"></audio>
+      <!-- 測試點擊數 -->
+      <div id="message"></div>
+      <!-- 測試按鈕 -->
+      <input type="button" value="遊戲開始！" id="time" hidden />
+    </div>
+    <script src="./js/all.js"></script>
+  </body>
+</html>
